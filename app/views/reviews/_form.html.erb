@@ -1,0 +1,6 @@
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, label: 'Your review' %>
+  <%= f.input :rating, collection: Review::RATINGS, error: 'Rating can\'t be blank' %>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
